@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-commerce - Prodotto</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <script src = "script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="luxury-header">
+        <div class="header-left"><span class="cross-icon">✠</span></div>
+        <div class="header-center"><img src="logo.png" alt="Chrome"></div>
+        <div class="header-right">
+            <nav class="luxury-nav">
+            <a href="#" style="position: relative;">Carrello<span class="cart-badge" id="cart-badge">0</span></a>
+            <a href="#">Prodotti</a>
+            <a href="#">Assistenza</a>
+            <a href="#">Accedi</a>
+        </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb-bar">
+        <nav class="breadcrumb">
+            <a href="#">Home</a><span>/</span><a href="#">Smartwatch</a><span>/</span><span>Smartwatch-Chrome-Pro-Max</span>
+        </nav>
+    </div>
+
+    <main>
+        <div class="product-layout">
+            <div class="gallery">
+                <div class="thumbnails">
+                    <div class="thumb active"><img src="CH1.jpg" alt="V1"></div>
+                    <div class="thumb"><img src="CH2.jpg" alt="V2"></div>
+                    <div class="thumb"><img src="CH3.png" alt="V3"></div>
+                    <div class="thumb"><img src="CH4.jpg" alt="V4"></div>
+                </div>
+                <div class="main-image"><img src="CH1.jpg" alt="Smartwatch" id="mainImg"></div>
+            </div>
+
+            <section class="product-detail">
+                <p class="small-text">Codice prodotto: #99283-Z | Varie</p>
+                <span class="badge-novita">Novità</span>
+                <h1>Smartwatch Modello Chrome Pro Max 2024 (Eu)</h1>
+                <p class="product-subtitle">Versione EU · Display HD · Resistente all'acqua</p>
+                <hr class="divider">
+                <div class="price-container">
+                    <span class="old">€2499,00</span>
+                    <span class="new">€1599,00</span>
+                    <span class="tax">IVA inclusa</span>
+                </div>
+                <hr class="divider">
+                <form action="#" method="post">
+                    <div class="field">
+                        <label>Dimensioni cassa</label>
+                        <div class="variant-buttons">
+                            <button type="button" class="variant">42 MM</button>
+                            <button type="button" class="variant active">46 MM</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Variante colore</label>
+                        <div class="variant-buttons">
+                            <button type="button" class="variant active">Nero</button>
+                            <button type="button" class="variant disabled" disabled>Rosso</button>
+                            <button type="button" class="variant disabled" disabled>Verde</button>
+                        </div>
+                    </div>
+                    <div class="field quantity">
+                        <label for="qty">Quantità</label>
+                        <select id="qty">
+                            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                        </select>
+                    </div>
+                </form>
+                <button class="add-cart-desktop">Aggiungi al carrello</button>
+            </section>
+        </div>
+
+        <div class="product-lower">
+            <section>
+                <h2 class="section-title">Descrizione prodotto</h2>
+                <div class="product-description">
+                    <p>Lo <strong>Modello Chrome Pro Max Turbo 2024</strong>  unisce design elegante e tecnologia avanzata in un dispositivo leggero e confortevole, perfetto per accompagnarti in ogni momento della giornata.</p>
+                    <p>Il <strong>display ad alta definizione</strong> garantisce immagini nitide e colori vividi, con un touch fluido e intuitivo per un utilizzo semplice e immediato.</p>
+                    <p>Dotato di <strong>sensori evoluti</strong> per il <strong>monitoraggio della salute</strong>, consente di tenere sotto controllo <strong>frequenza cardiaca</strong>, <strong>qualità del sonno</strong>, livello di stress e saturazione dell'ossigeno nel sangue, offrendo una visione completa del tuo benessere.</p>
+                    <p>Le numerose <strong>modalità sportive</strong>, insieme alla resistenza all'acqua, lo rendono ideale per allenamenti indoor e outdoor, incluso il nuoto. La batteria a lunga durata assicura diversi giorni di utilizzo con una sola ricarica.</p>
+                    <p>Funzioni smart come controllo della musica, meteo, promemoria, timer e sveglie completano un'esperienza pensata per semplificare la vita quotidiana.</p>
+                </div>
+            </section>
+            <hr class="divider" style="margin: 28px 0;">
+            <section>
+                <h2 class="section-title">Dettagli tecnici</h2>
+                <div class="feature-icons">
+                    <div class="feature-icon-item"><img src="battery-medium-light.svg" alt="B"><span>FINO A 48 ORE DI AUTONOMIA</span></div>
+                    <div class="feature-icon-item"><img src="bluetooth-light.svg" alt="B"><span>CONNETTIVITÀ BLUETOOTH</span></div>
+                    <div class="feature-icon-item"><img src="barbell-light.svg" alt="S"><span>MODALITÀ SPORTIVE MULTIPLE</span></div>
+                    <div class="feature-icon-item"><img src="towel-light.svg" alt="R"><span>RESISTENTE ALL'ACQUA E AL NUOTO</span></div>
+                    <div class="feature-icon-item"><img src="palette-light.svg" alt="C"><span>DISPONIBILE IN 3 COLORAZIONI</span></div>
+                    <div class="feature-icon-item"><img src="ruler-light.svg" alt="D"><span>DESIGN LEGGERO 50G</span></div>
+                    <div class="feature-icon-item"><img src="vault-light.svg" alt="G"><span>GARANZIA 2 ANNI</span></div>
+                    <div class="feature-icon-item"><img src="book-open-text-light.svg" alt="M"><span>MANUALE INCLUSO</span></div>
+                </div>
+                
+            </section>
+            <hr class="divider" style="margin: 28px 0;">
+            <aside class="reviews">
+                <h2 class="section-title">Recensioni clienti (3)</h2>
+                <div class="review-item">
+                    <div class="review-header"><strong>Utente_Anonimo99</strong><span class="stars">★★★☆☆</span><span class="verified">Acquisto verificato</span></div>
+                    <p>Il prodotto è arrivato puntuale ma la scatola era ammaccata. Non l'ho ancora provato ma spero funzioni.</p>
+                </div>
+                <hr class="divider">
+                <div class="review-item">
+                    <div class="review-header"><strong>Marco V.</strong><span class="stars">★☆☆☆☆</span></div>
+                    <p>NON COMPRATELO!! Nella descrizione c'era scritto che faceva il caffè ma invece segna solo l'ora.</p>
+                </div>
+                <hr class="divider">
+                <div class="review-item">
+                    <div class="review-header"><strong>S. Rossi</strong><span class="stars">★★★★☆</span></div>
+                    <p>ok.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Chrome Hearts Goat Store – Smartphone, smartwatch, audio smart e dispositivi per la vita digitale.<br>
+        Viale xxxxxx 67, ITS OLIVETTI(FC) &nbsp;|&nbsp; P.Iva: xxxxxxxxxxxxxxxxxx
+    </footer>
+
+    <script>
+        const thumbs = document.querySelectorAll('.thumb');
+        const mainImg = document.getElementById('mainImg');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                thumbs.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                mainImg.src = thumb.querySelector('img').src;
+            });
+        });
+        document.querySelectorAll('.variant-buttons').forEach(group => {
+            group.querySelectorAll('.variant:not(.disabled)').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    group.querySelectorAll('.variant').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
