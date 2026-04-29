@@ -50,7 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
     cartBtn.addEventListener('mousedown', () => cartBtn.style.transform = 'scale(0.95)');
     cartBtn.addEventListener('mouseup', () => cartBtn.style.transform = 'scale(1.02)');
 
+    const menuToggle = document.getElementById('menuToggle');
+    const navDropdown = document.getElementById('nav-dropdown');
 
+   const closeMenu = () => {
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        if (navDropdown) navDropdown.classList.remove('open'); // NUOVO: Usa la classe CSS
+    };
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            
+            // Aggiorna aria-expanded (questo fa ruotare la croce via CSS)
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            
+            // Aggiunge o rimuove la classe per animare la tendina
+            if (navDropdown) navDropdown.classList.toggle('open', !isOpen);
+        });
+    }
+
+    document.addEventListener('click', (event) => {
+        // Controlla se il menu ha la classe 'open' invece di '.hidden'
+        if (navDropdown && navDropdown.classList.contains('open') && !menuToggle.contains(event.target) && !navDropdown.contains(event.target)) {
+            closeMenu();
+        }
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMenu();
+        }
+    });
+
+    navDropdown?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 
     let cartTotal = 0;
     const cartBadge = document.getElementById('cart-badge');

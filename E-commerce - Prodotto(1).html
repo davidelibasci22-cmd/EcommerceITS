@@ -10,16 +10,20 @@
 </head>
 <body>
     <header class="luxury-header">
-        <div class="header-left"><span class="cross-icon">✠</span></div>
-        <div class="header-center"><img src="logo.png" alt="Chrome"></div>
-        <div class="header-right">
-            <nav class="luxury-nav">
-            <a href="#" style="position: relative;">Carrello<span class="cart-badge" id="cart-badge">0</span></a>
-            <a href="#">Prodotti</a>
-            <a href="#">Assistenza</a>
-            <a href="#">Accedi</a>
-        </nav>
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-dropdown">
+                <span class="cross-icon" aria-hidden="true">✠</span>
+                <span class="sr-only">Apri menu</span>
+            </button>
+            <nav class="luxury-nav nav-dropdown" id="nav-dropdown" aria-label="Menu principale" >
+                <a href="#" class="menu-item">Carrello<span class="cart-badge" id="cart-badge">0</span></a>
+                <a href="#" class="menu-item">Prodotti</a>
+                <a href="#" class="menu-item">Assistenza</a>
+                <a href="#" class="menu-item">Accedi</a>
+            </nav>
         </div>
+        <div class="header-center"><img src="logo.png" alt="Chrome"></div>
+        <div class="header-right"></div>
     </header>
 
     <div class="breadcrumb-bar">
@@ -94,34 +98,83 @@
             <section>
                 <h2 class="section-title">Dettagli tecnici</h2>
                 <div class="feature-icons">
-                    <div class="feature-icon-item"><img src="battery-medium-light.svg" alt="B"><span>FINO A 48 ORE DI AUTONOMIA</span></div>
-                    <div class="feature-icon-item"><img src="bluetooth-light.svg" alt="B"><span>CONNETTIVITÀ BLUETOOTH</span></div>
-                    <div class="feature-icon-item"><img src="barbell-light.svg" alt="S"><span>MODALITÀ SPORTIVE MULTIPLE</span></div>
-                    <div class="feature-icon-item"><img src="towel-light.svg" alt="R"><span>RESISTENTE ALL'ACQUA E AL NUOTO</span></div>
-                    <div class="feature-icon-item"><img src="palette-light.svg" alt="C"><span>DISPONIBILE IN 3 COLORAZIONI</span></div>
-                    <div class="feature-icon-item"><img src="ruler-light.svg" alt="D"><span>DESIGN LEGGERO 50G</span></div>
-                    <div class="feature-icon-item"><img src="vault-light.svg" alt="G"><span>GARANZIA 2 ANNI</span></div>
-                    <div class="feature-icon-item"><img src="book-open-text-light.svg" alt="M"><span>MANUALE INCLUSO</span></div>
+                    <div class="feature-icon-item"><img src="battery-medium-light.svg" alt="FINO A 48 ORE DI AUTONOMIA"><span>FINO A 48 ORE DI AUTONOMIA</span></div>
+                    <div class="feature-icon-item"><img src="bluetooth-light.svg" alt="CONNETTIVITÀ BLUETOOTH"><span>CONNETTIVITÀ BLUETOOTH</span></div>
+                    <div class="feature-icon-item"><img src="barbell-light.svg" alt="MODALITÀ SPORTIVE MULTIPLE"><span>MODALITÀ SPORTIVE MULTIPLE</span></div>
+                    <div class="feature-icon-item"><img src="towel-light.svg" alt="RESISTENTE ALL'ACQUA E AL NUOTO"><span>RESISTENTE ALL'ACQUA E AL NUOTO</span></div>
+                    <div class="feature-icon-item"><img src="palette-light.svg" alt="DISPONIBILE IN 3 COLORAZIONI"><span>DISPONIBILE IN 3 COLORAZIONI</span></div>
+                    <div class="feature-icon-item"><img src="ruler-light.svg" alt="DESIGN LEGGERO 50G"><span>DESIGN LEGGERO 50G</span></div>
+                    <div class="feature-icon-item"><img src="vault-light.svg" alt="GARANZIA 2 ANNI"><span>GARANZIA 2 ANNI</span></div>
+                    <div class="feature-icon-item"><img src="book-open-text-light.svg" alt="MANUALE INCLUSO"><span>MANUALE INCLUSO</span></div>
                 </div>
                 
             </section>
             <hr class="divider" style="margin: 28px 0;">
             <aside class="reviews">
                 <h2 class="section-title">Recensioni clienti (3)</h2>
+                
+                <div class="rating-summary">
+                    <div class="rating-avg">
+                        <div class="avg-score" id="avgScore">2.7</div>
+                        <div class="avg-stars" id="avgStars">★★★☆☆</div>
+                        <div class="avg-text">su 3 recensioni</div>
+                    </div>
+                    
+                    <div class="rating-bars">
+                        <div class="rating-bar-row">
+                            <span class="bar-label">5 ★</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="bar-count">0</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="bar-label">4 ★</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 33%"></div>
+                            </div>
+                            <span class="bar-count">1</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="bar-label">3 ★</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 33%"></div>
+                            </div>
+                            <span class="bar-count">1</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="bar-label">2 ★</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="bar-count">0</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="bar-label">1 ★</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 33%"></div>
+                            </div>
+                            <span class="bar-count">1</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="review-item">
-                    <div class="review-header"><strong>Utente_Anonimo99</strong><span class="stars">★★★☆☆</span><span class="verified">Acquisto verificato</span></div>
+                    <div class="review-header"><img src="pfp.svg" alt="avatar" class="review-avatar"><strong>Utente_Anonimo99</strong><span class="stars">★★★☆☆</span><span class="verified">Acquisto verificato</span></div>
                     <p>Il prodotto è arrivato puntuale ma la scatola era ammaccata. Non l'ho ancora provato ma spero funzioni.</p>
                 </div>
                 <hr class="divider">
                 <div class="review-item">
-                    <div class="review-header"><strong>Marco V.</strong><span class="stars">★☆☆☆☆</span></div>
+                    <div class="review-header"><img src="pfp.svg" alt="avatar" class="review-avatar"><strong>Marco V.</strong><span class="stars">★☆☆☆☆</span></div>
                     <p>NON COMPRATELO!! Nella descrizione c'era scritto che faceva il caffè ma invece segna solo l'ora.</p>
                 </div>
                 <hr class="divider">
                 <div class="review-item">
-                    <div class="review-header"><strong>S. Rossi</strong><span class="stars">★★★★☆</span></div>
+                    <div class="review-header"><img src="pfp.svg" alt="avatar" class="review-avatar"><strong>S. Rossi</strong><span class="stars">★★★★☆</span></div>
                     <p>ok.</p>
                 </div>
+                
+                <button class="btn-add-review">+ Aggiungi una recensione</button>
             </aside>
         </div>
     </main>
